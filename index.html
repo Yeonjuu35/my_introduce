@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+    <!-- reset cdn : 브라우저 초기화, 기초 여백 삭제 > 먼저 입력해주기  -->
+    <style>
+            /* 
+            rem은 디바이스가 가지고 있는 기본 사이즈
+            3rem은 디바이스의 기본 사이즈의 3배 
+            반응형할때 정말 많이 진짜 중요!
+            주민등록번호, 지문 등 다른 개체로부터 나만 인식시키는건 id , 다른 것들과 같이 사용할 수 없음
+            id는 적게 쓸 수록 좋음(많을수록 로딩이 길어진다)
+            class는 유연하게 사용할 수 있음. on/off가 가능. 필수 아님
+            class > id 
+            공통적인것부터 시작하기
+            */
+
+
+
+            /* 
+            .gnb{
+                border-radius: 80px; ㅣ 모서리를 둥글게 
+                background-color: black; ㅣ 배경색 
+                font-size: 82px; ㅣ 글씨 크기
+                padding: 50px 100px 50px 100px; ㅣ 안쪽 여백
+                margin: 100px 0 0 0 ; ㅣ 바깥쪽 여백 
+                display: inline-block;
+                text-decoration: none; ㅣ 글씨 데코 (밑줄 등) 
+                }
+            .menu1{ color: yellow;}
+            .menu2{ color: white;}
+            .menu3{ color: yellow;}
+            */
+
+            .gnb{
+                border-radius: 0;
+                display: inline-block; /* 너비 높이 모두 인식 */
+                font-size: 61px;
+                margin: 100px 0 0 0;
+                padding: 50px;
+                text-decoration: none;
+                }
+            .menu1{ color: black; background-color: white; }
+            .menu2{ color: red; background-color: lightgrey; }
+
+            /*
+            .gnb{
+                border-radius: 0;
+                display: inline-block; 
+                font-size: 61px;
+                margin: 100px 0 0 0;
+                padding: 50px;
+                text-decoration: none;
+                color: black;
+                }
+            .menu2{ color: red; background-color: lightgrey; }
+            */
+            
+            .teeth_logo img { width: 120px;}
+
+            /*
+            svg는 반드시 사이즈를 스타일로 관리해주기. (단위가 없음, 상대단위)
+            png, jpg, gif는 너비와 높이가 픽셀로 되어있어서 안 해줘도 된다,
+            */
+
+    </style>
+</head>
+
+<body>
+    <!-- 
+        <a href="" class="logo"><img src="" alt=""></a>
+        a.logo>img
+
+        <a href="" class="logo" id="logo"><img src="" alt=""></a>
+        a.logo#logo>img
+
+        .은 class / #은 id 로 변경된다
+        class와 id는 그 코드만의 이름을 지어준다고 생각하기
+        나중에 단일 코드만의 추가요소를 넣을 수 있음
+
+        id 공백 주의하기 > 다른 개체로 인식됨
+        숫자는 변수 성질을 가지고 있기 때문에 가장 앞에다가 사용할 수 없음(class/id 공통)
+        특수문자는 가능하지만 사용 비추천
+        대소문자는 구분하기 때문에 하나로 규칙을 정하기(언더바 사용/대소문자 사용 > 레이블링 규칙)
+    -->
+
+    <!-- 
+        <a href="" class="menu1 gnb">회사소개</a>
+        <a href="" class="menu2 gnb">제품소개</a>
+        <a href="" class="menu3 gnb">커뮤니티</a> 
+    -->
+    <!-- a.menu$.gnb*3 -->
+    
+    /<br>
+
+    <a href="" class="menu1 gnb">회사소개</a>
+    <a href="" class="menu2 gnb">제품소개</a>
+    <a href="" class="menu1 gnb">고객소개</a>
+    <a href="" class="menu2 gnb">커뮤니티</a>
+
+
+    <h1>
+        <a href="" class="teeth_logo"><img src="./teeth-01.svg" alt="logo"></a>
+    </h1>
+    <!-- 링크값 alt 아무것도 없으면 안됨 #(새로고침을 의미)라도 넣어주기 -->
+
+</body>
+</html>
